@@ -6,11 +6,18 @@
   "description": "Tindev by Rocketseat, remade implementing DDD, TDD and some other concepts i've been studying :D",
   "license": "MIT",
   "scripts": {
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly --ignore-watch node_modules --no-notify index.ts",
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@types/jest": "^26.0.4",
+    "babel-plugin-module-resolver": "^4.0.0",
     "eslint": "^5.16.0",
     "jest": "^26.1.0",
     "ts-jest": "^26.1.2",
