@@ -1,20 +1,52 @@
 {
-    "env": {
-        "es2020": true,
-        "node": true,
-        "jest": true
-    },
-    "extends": [
-        "airbnb-base"
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
+  "rules": {
+    "indent": ["error", 2, { "flatTernaryExpressions": true }],
+    "arrow-parens": ["error", "as-needed"],
+    "class-methods-use-this": "off",
+    "camelcase": "off",
+    "lines-around-directive": "off",
+    "no-multi-spaces": ["error", { "exceptions": { "ConditionalExpression": true } }],
+    "no-underscore-dangle": "off",
+    "no-useless-constructor": "off",
+    "object-curly-newline": ["error", { "consistent": true }],
+    "object-curly-spacing": ["error", "always"],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "implicit-arrow-linebreak": "off",
+    "max-len": ["error", { "code": 130 }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 11,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules": {
-    }
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          "/^@/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  }
 }
