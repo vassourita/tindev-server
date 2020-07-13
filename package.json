@@ -6,11 +6,20 @@
   "description": "Tindev by Rocketseat, remade implementing DDD, TDD and some other concepts i've been studying :D",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly --ignore-watch node_modules --no-notify index.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly --ignore-watch node_modules --no-notify index.ts",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "eslint": "^5.16.0",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.2",
     "ts-node-dev": "^1.0.0-pre.51",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "eslint-config-airbnb-base": "^14.2.0"
   }
 }
