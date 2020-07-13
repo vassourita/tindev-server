@@ -6,10 +6,11 @@
   "description": "Tindev by Rocketseat, remade implementing DDD, TDD and some other concepts i've been studying :D",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly --ignore-watch node_modules --no-notify index.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly --ignore-watch node_modules --no-notify index.ts"
   },
   "devDependencies": {
     "ts-node-dev": "^1.0.0-pre.51",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.6"
   }
 }
