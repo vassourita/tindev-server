@@ -24,25 +24,35 @@
     "no-multi-spaces": ["error", { "exceptions": { "ConditionalExpression": true } }],
     "no-underscore-dangle": "off",
     "no-useless-constructor": "off",
+    "no-empty-function": "off",
     "object-curly-newline": ["error", { "consistent": true }],
     "object-curly-spacing": ["error", "always"],
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "implicit-arrow-linebreak": "off",
-    "max-len": ["error", { "code": 130 }],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
         "argsIgnorePattern": "_"
       }
     ],
+    "semi": "off",
+    "@typescript-eslint/semi": ["error"],
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always",
         "groups": [
           "module",
-          "/^@/",
+          "/^@shared/",
+          "/^@config/",
+          "/^@modules/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
