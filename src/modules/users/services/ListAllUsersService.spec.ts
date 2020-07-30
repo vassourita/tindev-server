@@ -10,18 +10,24 @@ describe('ListAllUsersService', () => {
     const fakeUserRepository = new FakeUserRepository();
 
     await fakeUserRepository.create({
-      username: 'John Doe',
-      email: 'johndoe@example.com',
+      name: 'John Doe',
+      username: 'johndoe',
+      avatarUrl: '',
+      bio: '',
     });
 
     await fakeUserRepository.create({
-      username: 'John Tre',
-      email: 'johntre@example.com',
+      name: 'John Tre',
+      username: 'johntre',
+      avatarUrl: '',
+      bio: '',
     });
 
     await fakeUserRepository.create({
-      username: 'John Qua',
-      email: 'johnqua@example.com',
+      name: 'John Qua',
+      username: 'johnqua',
+      avatarUrl: '',
+      bio: '',
     });
 
     listAllUsersService = new ListAllUsersService(fakeUserRepository);
@@ -33,8 +39,8 @@ describe('ListAllUsersService', () => {
     expect(users.length).toBe(3);
   });
 
-  it('should list all users except the one with id passed on params', async () => {
-    const users = await listAllUsersService.execute('John Qua');
+  it('should list all users except the one with username passed on params', async () => {
+    const users = await listAllUsersService.execute('johnqua');
 
     expect(users.length).toBe(2);
   });

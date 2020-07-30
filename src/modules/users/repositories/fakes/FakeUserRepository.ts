@@ -10,7 +10,7 @@ class FakeUserRepository implements IUserRepository {
     return this.users;
   }
 
-  public async allExcept(username: string) {
+  public async allExcept(username?: string) {
     return this.users.filter(u => u.username !== username);
   }
 
@@ -20,10 +20,10 @@ class FakeUserRepository implements IUserRepository {
     return user;
   }
 
-  public async create({ username, email }: ICreateUserDTO) {
+  public async create(data: ICreateUserDTO) {
     const user = new User();
 
-    Object.assign(user, { username, email });
+    Object.assign(user, data);
 
     this.users.push(user);
 

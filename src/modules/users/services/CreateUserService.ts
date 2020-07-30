@@ -24,7 +24,7 @@ class CreateUserService {
     const data = {
       name,
       bio,
-      user: username,
+      username,
       avatarUrl: avatar_url,
     };
 
