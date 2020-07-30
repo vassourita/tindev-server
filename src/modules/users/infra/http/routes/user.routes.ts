@@ -15,13 +15,11 @@ routes.get('/', async (request, response) => {
 });
 
 routes.post('/', async (request, response) => {
-  const { email, username } = request.body;
+  const { username } = request.body;
 
   const createUser = container.resolve(CreateUserService);
 
-  const user = await createUser.execute({
-    email, username,
-  });
+  const user = await createUser.execute(username);
 
   response.json(user);
 });
