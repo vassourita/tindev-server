@@ -1,21 +1,23 @@
-{
-   "name": "default",
-   "type": "postgres",
-   "host": "localhost",
-   "port": 5432,
-   "username": "postgres",
-   "password": "postgres",
-   "database": "tindev-db",
-   "logging": false,
-   "synchronize": true,
-   "entities": [
-     "src/modules/**/models/*.ts"
-   ],
-   "migrations": [
-     "src/shared/infra/typeorm/migrations/*.ts"
-   ],
-   "cli": {
-     "entitiesDir": "src/modules/**/models",
-     "migrationsDir": "src/shared/infra/typeorm/migrations"
-   }
- }
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "tindev-db",
+    "logging": false,
+    "synchronize": true,
+    "entities": [
+      "src/modules/**/models/*.ts"
+    ],
+    "migrations": [
+      "src/shared/infra/typeorm/migrations/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "src/modules/**/models",
+      "migrationsDir": "src/shared/infra/typeorm/migrations"
+    }
+  }
+]

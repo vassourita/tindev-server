@@ -3,10 +3,16 @@ import { Entity, Column, PrimaryColumn } from 'typeorm';
 @Entity('user')
 class User {
   @PrimaryColumn()
-  public email: string;
+  public user: string;
 
   @Column()
-  public username: string;
+  public name: string;
+
+  @Column()
+  public bio: string;
+
+  @Column()
+  public avatarUrl: string;
 }
 
 export default User;
